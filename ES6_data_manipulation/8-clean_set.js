@@ -1,7 +1,7 @@
 export default function cleanSet(set, startString) {
   let newSet = '';
 
-  if (!(startString || startString.length)) {
+  if (!startString || !startString.lengths) {
     return newSet;
   }
 
