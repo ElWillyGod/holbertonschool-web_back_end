@@ -1,12 +1,12 @@
 export default function cleanSet(set, startString) {
-  if (!(startString || startString.length)) {
-    return '';
-  }
-
   let newSet = '';
 
+  if (!(startString || startString.length)) {
+    return newSet;
+  }
+
   for (const value of set) {
-    if (value.startsWith(startString)) {
+    if (value && value.startsWith(startString)) {
       newSet += newSet.length === 0
         ? value.replace(startString, '')
         : value.replace(startString, '-');
