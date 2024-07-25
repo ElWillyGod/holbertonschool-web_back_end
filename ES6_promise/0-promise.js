@@ -1,5 +1,5 @@
 export default function getResponseFromAPI() {
-    return new Promise((volvera) => {
-        volvera();
-    });
+  return new Promise((volvera) => {
+    volvera();
+  });
 }
