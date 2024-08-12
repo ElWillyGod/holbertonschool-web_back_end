@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+'''
+importar el otro modulo y hacer n llamadas a el
+retornar los tiempos de espera en una lista ordenada
+'''
+import asyncio
+from typing import List
+
+wait_random = __import__('0-basic_async_syntax').wait_random
+
+
+def wait_n(n: int, max_delay: int) -> List[float]:
+    '''
+    hace n llamadas a wait_random y retorna una lista con los tiempos de espera
+    '''
+    return asyncio.run(
+        asyncio.gather(*(wait_random(max_delay) for _ in range(n))))
