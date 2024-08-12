@@ -14,6 +14,6 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     hace n llamadas a wait_random y retorna una lista con los tiempos de espera
     '''
     # return await asyncio.gather(*(wait_random(max_delay) for _ in range(n)))
-    
+
     asyncr = [wait_random(max_delay) for _ in range(n)]
     return [await task for task in asyncio.as_completed(asyncr)]
