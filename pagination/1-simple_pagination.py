@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+'''
+doc
+'''
 import csv
 import math
 from typing import List
