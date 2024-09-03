@@ -1,1 +1,6 @@
+#!/usr/bin/env python3
+'''
 show dbs;
+'''
+
+show dbs
