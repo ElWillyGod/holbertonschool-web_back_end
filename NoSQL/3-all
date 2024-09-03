@@ -1,2 +1,2 @@
 // Description: all
-db.school.all()
+db.school.find()
